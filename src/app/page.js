@@ -198,10 +198,11 @@ export default function Home() {
         {
           sidebar &&
           <div className={
-            ` w-full bg-[#15132B] text-white  z-40
-            ${sidebar ? 'translate-x-0' : 'translate-x-14 ease-in-out duration-300'}
+            `block lg:hidden w-full bg-[#15132B] text-white ease-in-out duration-300 
+            ${sidebar ? '' : ''}
             `
           }>
+            {/* ${sidebar ? '-translate-x-80' : 'translate-x-full'} */}
 
             {/* logo */}
             <div className="flex justify-between py-3 px-5 ">
@@ -454,7 +455,7 @@ export default function Home() {
         {/* 2nd */}
         {
           !sidebar &&
-          <div className="w-full">
+          <div className="w-full overflow-x-hidden">
 
             {/* top navigation bar sm devices */}
             <div className="bg-[#15132B] py-3 flex lg:hidden items-center gap-3 justify-between px-5">
@@ -557,7 +558,7 @@ export default function Home() {
                     alt=""
                   />
                   <div className="h-[18px] w-[18px] rounded-full bg-[#5ECFFF] flex items-center justify-center absolute -top-2 left-3">
-                    <p className="text-[12px] font-semibold">5</p>
+                    <p className="text-[12px] font-semibold">2</p>
                   </div>
                 </div>
 
@@ -628,10 +629,10 @@ export default function Home() {
             {/* content */}
             <div className="bg-[#0d0b20] w-full ">
               {/* school */}
-              <div className=" py-7 px-6 text-white ">
-                <div className=" bg-[#15132B] py-7 px-4 rounded-[14px]">
+              <div className="py-3 px-3 lg:py-7 lg:px-6 text-white ">
+                <div className=" bg-[#15132B] py-3 px-3 lg:py-7 lg:px-4 rounded-[14px]">
                   {/* 1st */}
-                  <div className="flex justify-between">
+                  <div className="lg:flex justify-between">
                     {/* 1st */}
                     <div>
                       <div className="flex gap-3 items-center">
@@ -644,12 +645,12 @@ export default function Home() {
                         />
                         <h1 className="font-bold text-[16px]">School November Tasks</h1>
                       </div>
-                      <p className="pl-11 pt-1  text-[14px]">Created by Instructor Day on November 31, 2022</p>
+                      <p className="lg:pl-11 pt-3 lg:pt-1  text-[14px]">Created by Instructor Day on November 31, 2022</p>
 
 
                     </div>
                     {/* 2nd */}
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 pt-3 lg:pt-0">
                       <div>
                         <h1 className="font-bold text-[15px]">Centered Martial Arts</h1>
                         <p className="pr-11 pt-1  text-[12px] text-[#A5A5A5]">Sunnyvale, Ca</p>
@@ -675,10 +676,9 @@ export default function Home() {
 
 
                   {/* 2nd */}
-                  <div className="ml-10 pt-[27px] flex gap-3">
+                  <div className="lg:ml-10 pt-[27px] lg:flex gap-3 ">
                     {/* img */}
                     <div className="flex ">
-
                       <div className="h-[35px] w-[35px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
                         <Image
                           className=" rounded-full"
@@ -725,15 +725,14 @@ export default function Home() {
 
                       </div>
 
-
                     </div>
 
                     {/* buttons */}
-                    <div className="flex gap-8 w-full ">
+                    <div className="  mt-3 lg:flex gap-8 w-full ">
                       {/* buttons */}
-                      <div className="flex  gap-3">
+                      <div className="lg:flex  gap-3 my-5 lg:my-0">
                         {/* invite people */}
-                        <div className="flex items-center gap-2 bg-[#6418C3] w-[163px] h-[42px] rounded-[14px] px-2 py-1 cursor-pointer">
+                        <div className=" flex items-center gap-2 bg-[#6418C3] w-[163px] h-[42px] rounded-[14px] px-2 py-1 cursor-pointer">
                           <Image
                             className=" rounded-full"
                             width={24}
@@ -745,18 +744,18 @@ export default function Home() {
                         </div>
 
                         {/* private */}
-                        <div className="flex justify-center items-center  bg-transparent w-[89px] h-[42px] border border-[#7879F1] rounded-[14px] cursor-pointer">
+                        <div className="my-3 lg:my-0 flex justify-center items-center  bg-transparent w-[89px] h-[42px] border border-[#7879F1] rounded-[14px] cursor-pointer">
 
                           <p className="font-bold">Private</p>
                         </div>
                         {/* Edit */}
-                        <div className="flex justify-center items-center  bg-[#7879F1] w-[78px] h-[42px] border border-[#7879F1] rounded-[14px] cursor-pointer">
+                        <div className="my-3 lg:my-0 flex justify-center items-center  bg-[#7879F1] w-[78px] h-[42px] border border-[#7879F1] rounded-[14px] cursor-pointer">
 
                           <p className="font-bold">Edit</p>
                         </div>
 
                         {/* 45 Comments */}
-                        <div className="flex items-center gap-2 bg-transparent border border-[#7879F1] w-[163px] h-[42px] rounded-[14px] px-2 py-1 cursor-pointer">
+                        <div className="my-3 lg:my-0 flex items-center gap-2 bg-transparent border border-[#7879F1] w-[163px] h-[42px] rounded-[14px] px-2 py-1 cursor-pointer">
                           <Image
                             className=" rounded-full"
                             width={24}
@@ -768,9 +767,9 @@ export default function Home() {
                         </div>
                       </div>
                       {/* progress */}
-                      <div className="flex items-center  w-11/12">
+                      <div className="lg:flex items-center  w-11/12">
                         <p className="text-[14px]">Total Progress 60%</p>
-                        <div className="w-full px-4 lg:w-6/12">
+                        <div className="w-full py-3 lg:py-0 lg:px-4 lg:w-6/12">
                           <div className="mb-0">
                             <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
                               <div
@@ -790,832 +789,1125 @@ export default function Home() {
                 </div>
 
               </div>
+
               {/* cards */}
 
-              {/* <div className="w-full overflow-x-auto"> */}
-              <div className="w-full  ">
-                {/* cards head */}
-                <div className="w-full ">
-                  {/* <div className="max-w-xl overflow-x-auto"> */}
-                  <div className="flex justify-between gap-6 px-6 py-5 ">
-                    {/* todo */}
-                    <div className="flex items-center  justify-between w-[250px] ">
-                      <h3 className="text-white font-bold">To-Do List (24)</h3>
-                      <Image
-                        height={49}
-                        width={49}
-                        src={'/cards/btnAdd.png'}
-                        alt=""
-                      />
+              <div className=" w-full">
+                <div className=" w-full overflow-x-auto">
+                  {/* <div className="w-full  "> */}
+                  {/* <div className="w-full "> */}
+                  <div className="w-[1500px] ">
+
+
+                    {/* cards head */}
+                    <div className="flex justify-between gap-8  px-8 py-5 ">
+                      {/* todo */}
+                      <div className="flex items-center  justify-between w-[380px] ">
+                        <h3 className="text-white font-bold">To-Do List (24)</h3>
+                        <Image
+                          height={49}
+                          width={49}
+                          src={'/cards/btnAdd.png'}
+                          alt=""
+                        />
+                      </div>
+
+
+                      {/* in progress */}
+                      <div className="flex items-center justify-between w-[380px]">
+                        <h3 className="text-white font-bold">In Progress (2)</h3>
+                        <Image
+                          height={49}
+                          width={49}
+                          src={'/cards/btnAdd_1.png'}
+                          alt=""
+                        />
+                      </div>
+
+                      {/* Done */}
+                      <div className="flex items-center justify-between w-[380px]">
+                        <h3 className="text-white font-bold">Done (3)</h3>
+                        <Image
+                          height={49}
+                          width={49}
+                          src={'/cards/btnAdd_1.png'}
+                          alt=""
+                        />
+                      </div>
+                      {/* Revised */}
+                      <div className="flex items-center justify-between w-[380px]">
+                        <h3 className="text-white font-bold">Revised (0)</h3>
+                        <Image
+                          height={49}
+                          width={49}
+                          src={'/cards/btnAdd_1.png'}
+                          alt=""
+                        />
+                      </div>
+                      {/* Content */}
+                      <div className="flex items-center justify-between w-[380px]">
+                        <h3 className="text-white font-bold">Content(2)</h3>
+                        <Image
+                          height={49}
+                          width={49}
+                          src={'/cards/btnAdd_1.png'}
+                          alt=""
+                        />
+                      </div>
+
+
+
+
+
+
+
+
+
                     </div>
 
-                    {/* in progress */}
-                    <div className="flex items-center justify-between w-[250px]">
-                      <h3 className="text-white font-bold">In Progress (2)</h3>
-                      <Image
-                        height={49}
-                        width={49}
-                        src={'/cards/btnAdd_1.png'}
-                        alt=""
-                      />
+
+
+                    {/* all cards */}
+                    <div className="px-6 pb-8 grid grid-cols-5 gap-5">
+                      {/* c1 */}
+                      <div className=" text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
+
+                        <div className="flex justify-between">
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <div
+                                className="h-[10px] w-[10px] rounded-full bg-[#FFAB2D]"
+                              />
+                              <small className="text-[#FFAB2D]">Impotent</small>
+                            </div>
+
+                          </div>
+                          <Image
+                            className="cursor-pointer"
+                            height={20}
+                            width={20}
+                            src={'/cards/threeDots.png'}
+                            alt=""
+                          />
+                        </div>
+
+                        <p className="text-[12px] py-2 mt-2  font-semibold">Create sign up sheet for holiday student/parent conferences.</p>
+                        {/* progress */}
+                        <div className="w-full  lg:w-11/12 py-3">
+                          <div className="mb-0">
+                            <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
+                              <div
+                                className="bg-[#FFAB2D] absolute top-0 left-0 h-full w-1/3 rounded-2xl"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* card footer */}
+                        <div className="flex justify-between py-3">
+                          {/* img */}
+                          <div className="flex ">
+
+                            <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p1.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/segun_adebayo.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p3.jpeg'}
+                                alt=""
+                              />
+
+                            </div>
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p4.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+
+
+                          </div>
+                          {/*  */}
+                          <div className="flex items-center gap-1">
+                            <Image
+                              height={12}
+                              width={12}
+                              src={'/cards/clock.png'}
+                              alt=""
+                            />
+                            <small className="text-[#A5A5A5]">Due in 4 days</small>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                      {/* c2 */}
+                      <div className=" text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
+
+                        {/* card header */}
+                        <div className="flex justify-between">
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <div
+                                className="h-[10px] w-[10px] rounded-full bg-[#5ECFFF]"
+                              />
+                              <small className="text-[#5ECFFF]">Video</small>
+                            </div>
+
+                          </div>
+                          <Image
+                            className="cursor-pointer"
+                            height={20}
+                            width={20}
+                            src={'/cards/threeDots.png'}
+                            alt=""
+                          />
+                        </div>
+
+                        {/* card body */}
+                        <p className="text-[12px] py-2 mt-2  font-semibold">Create sparring tutorial video for the weekly class.</p>
+                        {/* progress */}
+                        <div className="w-full  lg:w-11/12 py-3">
+                          <div className="mb-0">
+                            <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
+                              <div
+                                className="bg-[#5ECFFF] absolute top-0 left-0 h-full w-2/3 rounded-2xl"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* card footer */}
+                        <div className="flex justify-between py-3">
+                          {/* img */}
+                          <div className="flex ">
+
+                            <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p1.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/segun_adebayo.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p3.jpeg'}
+                                alt=""
+                              />
+
+                            </div>
+
+
+
+                          </div>
+                          {/*  */}
+                          <div className="flex items-center gap-1">
+                            <Image
+                              height={12}
+                              width={12}
+                              src={'/cards/clock.png'}
+                              alt=""
+                            />
+                            <small className="text-[#A5A5A5]">Due in 4 days</small>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                      {/* c3 */}
+                      <div className=" text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
+
+                        {/* card header */}
+                        <div className="flex justify-between">
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <div
+                                className="h-[10px] w-[10px] rounded-full bg-[#FF4A55]"
+                              />
+                              <small className="text-[#FF4A55]">BUG FIXING</small>
+                            </div>
+
+                          </div>
+                          <Image
+                            className="cursor-pointer"
+                            height={20}
+                            width={20}
+                            src={'/cards/threeDots.png'}
+                            alt=""
+                          />
+                        </div>
+
+                        {/* card body */}
+                        <p className="text-[12px] py-2 mt-2  font-semibold">Action Button needed for Google Maps visits.</p>
+                        {/* progress */}
+                        <div className="w-full  lg:w-11/12 py-3">
+                          <div className="mb-0">
+                            <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
+                              <div
+                                className="bg-[#FF4A55] absolute top-0 left-0 h-full w-full rounded-2xl"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* card footer */}
+                        <div className="flex justify-between py-3">
+                          {/* img */}
+                          <div className="flex ">
+
+                            <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p1.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/segun_adebayo.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p3.jpeg'}
+                                alt=""
+                              />
+
+                            </div>
+
+
+
+                          </div>
+                          {/*  */}
+                          <div className="flex items-center gap-1">
+                            <Image
+                              height={12}
+                              width={12}
+                              src={'/cards/clock.png'}
+                              alt=""
+                            />
+                            <small className="text-[#A5A5A5]">Due in 4 days</small>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                      {/* c4 */}
+                      <div className=" text-white w-[250px] h-[90px] bg-[#211A75] rounded-[14px] px-5 py-5">
+                        <div className=" h-[50px] rounded-[14px] border border-dashed border-[#7879F1] bg-[#15132B]">
+
+                        </div>
+                      </div>
+
+
+                      {/* c5 */}
+                      <div className=" text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
+
+                        {/* card header */}
+                        <div className="flex justify-between">
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <div
+                                className="h-[10px] w-[10px] rounded-full bg-[#E328AF]"
+                              />
+                              <small className="text-[#E328AF]">Instructor Meeting</small>
+                            </div>
+
+                          </div>
+                          <Image
+                            className="cursor-pointer"
+                            height={20}
+                            width={20}
+                            src={'/cards/threeDots.png'}
+                            alt=""
+                          />
+                        </div>
+
+                        {/* card body */}
+                        <p className="text-[12px] py-2 mt-2  font-semibold">Plan holiday demonstration program. Create outline.</p>
+                        {/* progress */}
+                        <div className="w-full  lg:w-11/12 py-3">
+                          <div className="mb-0">
+                            <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
+                              <div
+                                className="bg-[#E328AF] absolute top-0 left-0 h-full w-2/4 rounded-2xl"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* card footer */}
+                        <div className="flex justify-between py-3">
+                          {/* img */}
+                          <div className="flex ">
+
+                            <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p1.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/segun_adebayo.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p3.jpeg'}
+                                alt=""
+                              />
+
+                            </div>
+
+
+
+                          </div>
+                          {/*  */}
+                          <div className="flex items-center gap-1">
+                            <Image
+                              height={12}
+                              width={12}
+                              src={'/cards/clock.png'}
+                              alt=""
+                            />
+                            <small className="text-[#A5A5A5]">Due in 4 days</small>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                      {/* c6 */}
+                      <div className=" text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
+
+                        {/* card header */}
+                        <div className="flex justify-between">
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <div
+                                className="h-[10px] w-[10px] rounded-full bg-[#E328AF]"
+                              />
+                              <small className="text-[#E328AF]">Instructor Meeting</small>
+                            </div>
+
+                          </div>
+                          <Image
+                            className="cursor-pointer"
+                            height={20}
+                            width={20}
+                            src={'/cards/threeDots.png'}
+                            alt=""
+                          />
+                        </div>
+
+                        {/* card body */}
+                        <p className="text-[12px] py-2 mt-2  font-semibold">Plan holiday demonstration program. Create outline.</p>
+                        {/* progress */}
+                        <div className="w-full  lg:w-11/12 py-3">
+                          <div className="mb-0">
+                            <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
+                              <div
+                                className="bg-[#E328AF] absolute top-0 left-0 h-full w-2/4 rounded-2xl"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* card footer */}
+                        <div className="flex justify-between py-3">
+                          {/* img */}
+                          <div className="flex ">
+
+                            <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p1.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/segun_adebayo.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p3.jpeg'}
+                                alt=""
+                              />
+
+                            </div>
+
+
+
+                          </div>
+                          {/*  */}
+                          <div className="flex items-center gap-1">
+                            <Image
+                              height={12}
+                              width={12}
+                              src={'/cards/clock.png'}
+                              alt=""
+                            />
+                            <small className="text-[#A5A5A5]">Due in 4 days</small>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                      {/* c-7 */}
+                      <div className="bg-[#07051A] rounded-[14px]  w-[250px] h-[200px] ">
+
+                        <div className=" rotate-6 translate-x-6 translate-y-9  text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
+
+                          {/* card header */}
+                          <div className="flex justify-between">
+                            <div>
+                              <div className="flex items-center gap-2">
+                                <div
+                                  className="h-[10px] w-[10px] rounded-full bg-[#FF4A55]"
+                                />
+                                <small className="text-[#FF4A55]">BUGS FIXING</small>
+                              </div>
+
+                            </div>
+                            <Image
+                              className="cursor-pointer"
+                              height={20}
+                              width={20}
+                              src={'/cards/threeDots.png'}
+                              alt=""
+                            />
+                          </div>
+
+                          {/* card body */}
+                          <p className="text-[12px] py-2 mt-2  font-semibold">Payment gateway needs reauthorization.</p>
+                          {/* progress */}
+                          <div className="w-full  lg:w-11/12 py-3">
+                            <div className="mb-0">
+                              <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
+                                <div
+                                  className="bg-[#FF4A55] absolute top-0 left-0 h-full w-11/12 rounded-2xl"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* card footer */}
+                          <div className="flex justify-between py-3">
+                            {/* img */}
+                            <div className="flex ">
+
+                              <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
+                                <Image
+                                  className=" rounded-full"
+                                  width={20}
+                                  height={20}
+                                  src={'/content/p1.jpg'}
+                                  alt=""
+                                />
+
+                              </div>
+
+                              <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                                <Image
+                                  className=" rounded-full"
+                                  width={20}
+                                  height={20}
+                                  src={'/content/segun_adebayo.jpg'}
+                                  alt=""
+                                />
+
+                              </div>
+                              <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                                <Image
+                                  className=" rounded-full"
+                                  width={20}
+                                  height={20}
+                                  src={'/content/p3.jpeg'}
+                                  alt=""
+                                />
+
+                              </div>
+
+
+
+                            </div>
+                            {/*  */}
+                            <div className="flex items-center gap-1">
+                              <Image
+                                height={12}
+                                width={12}
+                                src={'/cards/clock.png'}
+                                alt=""
+                              />
+                              <small className="text-[#A5A5A5]">Due in 4 days</small>
+                            </div>
+                          </div>
+
+
+                        </div>
+                      </div>
+
+
+                      {/* c8 */}
+                      <div className=" text-white w-[250px] h-[180px] bg-[#211A75] rounded-[14px] px-5 py-5">
+
+                        {/* card header */}
+                        <div className="flex justify-between">
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <div
+                                className="h-[10px] w-[10px] rounded-full bg-[#38E25D]"
+                              />
+                              <small className="text-[#38E25D]">Database</small>
+                            </div>
+
+                          </div>
+                          <Image
+                            className="cursor-pointer"
+                            height={20}
+                            width={20}
+                            src={'/cards/threeDots.png'}
+                            alt=""
+                          />
+                        </div>
+
+                        {/* card body */}
+                        <p className="text-[12px] py-2 mt-2  font-semibold">Update new instructor photos.</p>
+                        {/* progress */}
+                        <div className="w-full  lg:w-11/12 py-3">
+                          <div className="mb-0">
+                            <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
+                              <div
+                                className="bg-[#38E25D] absolute top-0 left-0 h-full w-full rounded-2xl"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* card footer */}
+                        <div className="flex justify-between py-3">
+                          {/* img */}
+                          <div className="flex ">
+
+                            <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p1.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/segun_adebayo.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p3.jpeg'}
+                                alt=""
+                              />
+
+                            </div>
+
+
+
+                          </div>
+                          {/*  */}
+                          <div className="flex items-center gap-1">
+                            <Image
+                              height={12}
+                              width={12}
+                              src={'/cards/clock.png'}
+                              alt=""
+                            />
+                            <small className="text-[#A5A5A5]">Due in 4 days</small>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                      {/* c9 */}
+                      <div className="">
+                      </div>
+
+                      {/* c10 */}
+                      <div className="  text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
+
+                        {/* card header */}
+                        <div className="flex justify-between">
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <div
+                                className="h-[10px] w-[10px] rounded-full bg-[#38E25D]"
+                              />
+                              <small className="text-[#38E25D]">Database</small>
+                            </div>
+
+                          </div>
+                          <Image
+                            className="cursor-pointer"
+                            height={20}
+                            width={20}
+                            src={'/cards/threeDots.png'}
+                            alt=""
+                          />
+                        </div>
+
+                        {/* card body */}
+                        <p className="text-[12px] py-2 mt-2  font-semibold">Determine how many boards need to be ordered for testing and demo.</p>
+                        {/* progress */}
+                        <div className="w-full  lg:w-11/12 py-3">
+                          <div className="mb-0">
+                            <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
+                              <div
+                                className="bg-[#38E25D] absolute top-0 left-0 h-full w-1/3 rounded-2xl"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* card footer */}
+                        <div className="flex justify-between py-3">
+                          {/* img */}
+                          <div className="flex ">
+
+                            <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p1.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/segun_adebayo.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p3.jpeg'}
+                                alt=""
+                              />
+
+                            </div>
+
+
+
+                          </div>
+                          {/*  */}
+                          <div className="flex items-center gap-1">
+                            <Image
+                              height={12}
+                              width={12}
+                              src={'/cards/clock.png'}
+                              alt=""
+                            />
+                            <small className="text-[#A5A5A5]">Due in 4 days</small>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                      {/* c11 */}
+                      <div className="  text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
+
+                        {/* card header */}
+                        <div className="flex justify-between">
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <div
+                                className="h-[10px] w-[10px] rounded-full bg-[#E328AF]"
+                              />
+                              <small className="text-[#E328AF]">Instructor Meeting</small>
+                            </div>
+
+                          </div>
+                          <Image
+                            className="cursor-pointer"
+                            height={20}
+                            width={20}
+                            src={'/cards/threeDots.png'}
+                            alt=""
+                          />
+                        </div>
+
+
+                        <p className="text-[12px] py-2 mt-2  font-semibold">Review/correct yellow belt techniques.</p>
+
+                        <div className="w-full  lg:w-11/12 py-3">
+                          <div className="mb-0">
+                            <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
+                              <div
+                                className="bg-[#E328AF] absolute top-0 left-0 h-full w-full rounded-2xl"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div className="flex justify-between py-3">
+
+                          <div className="flex ">
+
+                            <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p1.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/segun_adebayo.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p3.jpeg'}
+                                alt=""
+                              />
+
+                            </div>
+
+
+
+                          </div>
+
+                          <div className="flex items-center gap-1">
+                            <Image
+                              height={12}
+                              width={12}
+                              src={'/cards/clock.png'}
+                              alt=""
+                            />
+                            <small className="text-[#A5A5A5]">Due in 4 days</small>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                      {/* c12 */}
+                      <div className="">
+
+                      </div>
+
+                      {/* c13 */}
+                      <div className="  text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
+
+                        {/* card header */}
+                        <div className="flex justify-between">
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <div
+                                className="h-[10px] w-[10px] rounded-full bg-[#E328AF]"
+                              />
+                              <small className="text-[#E328AF]">Instructor Meeting</small>
+                            </div>
+
+                          </div>
+                          <Image
+                            className="cursor-pointer"
+                            height={20}
+                            width={20}
+                            src={'/cards/threeDots.png'}
+                            alt=""
+                          />
+                        </div>
+
+
+                        <p className="text-[12px] py-2 mt-2  font-semibold">Review/correct yellow belt techniques.</p>
+
+                        <div className="w-full  lg:w-11/12 py-3">
+                          <div className="mb-0">
+                            <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
+                              <div
+                                className="bg-[#E328AF] absolute top-0 left-0 h-full w-full rounded-2xl"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div className="flex justify-between py-3">
+
+                          <div className="flex ">
+
+                            <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p1.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/segun_adebayo.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p3.jpeg'}
+                                alt=""
+                              />
+
+                            </div>
+
+
+
+                          </div>
+
+                          <div className="flex items-center gap-1">
+                            <Image
+                              height={12}
+                              width={12}
+                              src={'/cards/clock.png'}
+                              alt=""
+                            />
+                            <small className="text-[#A5A5A5]">Due in 4 days</small>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                      {/* c14 */}
+                      <div className="">
+
+                      </div>
+
+                      {/* c15 */}
+                      <div className="  text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
+
+                        {/* card header */}
+                        <div className="flex justify-between">
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <div
+                                className="h-[10px] w-[10px] rounded-full bg-[#38E25D]"
+                              />
+                              <small className="text-[#38E25D]">Database</small>
+                            </div>
+
+                          </div>
+                          <Image
+                            className="cursor-pointer"
+                            height={20}
+                            width={20}
+                            src={'/cards/threeDots.png'}
+                            alt=""
+                          />
+                        </div>
+
+                        {/* card body */}
+                        <p className="text-[12px] py-2 mt-2  font-semibold">Determine how many boards need to be ordered for testing and demo.</p>
+                        {/* progress */}
+                        <div className="w-full  lg:w-11/12 py-3">
+                          <div className="mb-0">
+                            <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
+                              <div
+                                className="bg-[#38E25D] absolute top-0 left-0 h-full w-1/3 rounded-2xl"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* card footer */}
+                        <div className="flex justify-between py-3">
+                          {/* img */}
+                          <div className="flex ">
+
+                            <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p1.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/segun_adebayo.jpg'}
+                                alt=""
+                              />
+
+                            </div>
+                            <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
+                              <Image
+                                className=" rounded-full"
+                                width={20}
+                                height={20}
+                                src={'/content/p3.jpeg'}
+                                alt=""
+                              />
+
+                            </div>
+
+
+
+                          </div>
+                          {/*  */}
+                          <div className="flex items-center gap-1">
+                            <Image
+                              height={12}
+                              width={12}
+                              src={'/cards/clock.png'}
+                              alt=""
+                            />
+                            <small className="text-[#A5A5A5]">Due in 4 days</small>
+                          </div>
+                        </div>
+
+
+                      </div>
+
                     </div>
-
-                    {/* Done */}
-                    <div className="flex items-center justify-between w-[250px]">
-                      <h3 className="text-white font-bold">Done (3)</h3>
-                      <Image
-                        height={49}
-                        width={49}
-                        src={'/cards/btnAdd_1.png'}
-                        alt=""
-                      />
-                    </div>
-                    {/* Revised */}
-                    <div className="flex items-center justify-between w-[250px]">
-                      <h3 className="text-white font-bold">Revised (0)</h3>
-                      <Image
-                        height={49}
-                        width={49}
-                        src={'/cards/btnAdd_1.png'}
-                        alt=""
-                      />
-                    </div>
-
-
-
-
-
-
-
-
-
                   </div>
-
 
 
                 </div>
-
-                {/* all cards */}
-                <div className="px-6 pb-8 grid grid-cols-4 gap-5">
-                  {/* c1 */}
-                  <div className=" text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
-
-                    <div className="flex justify-between">
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <div
-                            className="h-[10px] w-[10px] rounded-full bg-[#FFAB2D]"
-                          />
-                          <small className="text-[#FFAB2D]">Impotent</small>
-                        </div>
-
-                      </div>
-                      <Image
-                        className="cursor-pointer"
-                        height={20}
-                        width={20}
-                        src={'/cards/threeDots.png'}
-                        alt=""
-                      />
-                    </div>
-
-                    <p className="text-[12px] py-2 mt-2  font-semibold">Create sign up sheet for holiday student/parent conferences.</p>
-                    {/* progress */}
-                    <div className="w-full  lg:w-11/12 py-3">
-                      <div className="mb-0">
-                        <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
-                          <div
-                            className="bg-[#FFAB2D] absolute top-0 left-0 h-full w-1/3 rounded-2xl"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* card footer */}
-                    <div className="flex justify-between py-3">
-                      {/* img */}
-                      <div className="flex ">
-
-                        <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/p1.jpg'}
-                            alt=""
-                          />
-
-                        </div>
-
-                        <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/segun_adebayo.jpg'}
-                            alt=""
-                          />
-
-                        </div>
-                        <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/p3.jpeg'}
-                            alt=""
-                          />
-
-                        </div>
-                        <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/p4.jpg'}
-                            alt=""
-                          />
-
-                        </div>
-
-
-                      </div>
-                      {/*  */}
-                      <div className="flex items-center gap-1">
-                        <Image
-                          height={12}
-                          width={12}
-                          src={'/cards/clock.png'}
-                          alt=""
-                        />
-                        <small className="text-[#A5A5A5]">Due in 4 days</small>
-                      </div>
-                    </div>
-
-
-                  </div>
-
-
-                  {/* c2 */}
-                  <div className=" text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
-
-                    {/* card header */}
-                    <div className="flex justify-between">
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <div
-                            className="h-[10px] w-[10px] rounded-full bg-[#5ECFFF]"
-                          />
-                          <small className="text-[#5ECFFF]">Video</small>
-                        </div>
-
-                      </div>
-                      <Image
-                        className="cursor-pointer"
-                        height={20}
-                        width={20}
-                        src={'/cards/threeDots.png'}
-                        alt=""
-                      />
-                    </div>
-
-                    {/* card body */}
-                    <p className="text-[12px] py-2 mt-2  font-semibold">Create sparring tutorial video for the weekly class.</p>
-                    {/* progress */}
-                    <div className="w-full  lg:w-11/12 py-3">
-                      <div className="mb-0">
-                        <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
-                          <div
-                            className="bg-[#5ECFFF] absolute top-0 left-0 h-full w-2/3 rounded-2xl"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* card footer */}
-                    <div className="flex justify-between py-3">
-                      {/* img */}
-                      <div className="flex ">
-
-                        <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/p1.jpg'}
-                            alt=""
-                          />
-
-                        </div>
-
-                        <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/segun_adebayo.jpg'}
-                            alt=""
-                          />
-
-                        </div>
-                        <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/p3.jpeg'}
-                            alt=""
-                          />
-
-                        </div>
-
-
-
-                      </div>
-                      {/*  */}
-                      <div className="flex items-center gap-1">
-                        <Image
-                          height={12}
-                          width={12}
-                          src={'/cards/clock.png'}
-                          alt=""
-                        />
-                        <small className="text-[#A5A5A5]">Due in 4 days</small>
-                      </div>
-                    </div>
-
-
-                  </div>
-
-                  {/* c3 */}
-                  <div className=" text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
-
-                    {/* card header */}
-                    <div className="flex justify-between">
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <div
-                            className="h-[10px] w-[10px] rounded-full bg-[#FF4A55]"
-                          />
-                          <small className="text-[#FF4A55]">BUG FIXING</small>
-                        </div>
-
-                      </div>
-                      <Image
-                        className="cursor-pointer"
-                        height={20}
-                        width={20}
-                        src={'/cards/threeDots.png'}
-                        alt=""
-                      />
-                    </div>
-
-                    {/* card body */}
-                    <p className="text-[12px] py-2 mt-2  font-semibold">Action Button needed for Google Maps visits.</p>
-                    {/* progress */}
-                    <div className="w-full  lg:w-11/12 py-3">
-                      <div className="mb-0">
-                        <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
-                          <div
-                            className="bg-[#FF4A55] absolute top-0 left-0 h-full w-full rounded-2xl"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* card footer */}
-                    <div className="flex justify-between py-3">
-                      {/* img */}
-                      <div className="flex ">
-
-                        <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/p1.jpg'}
-                            alt=""
-                          />
-
-                        </div>
-
-                        <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/segun_adebayo.jpg'}
-                            alt=""
-                          />
-
-                        </div>
-                        <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/p3.jpeg'}
-                            alt=""
-                          />
-
-                        </div>
-
-
-
-                      </div>
-                      {/*  */}
-                      <div className="flex items-center gap-1">
-                        <Image
-                          height={12}
-                          width={12}
-                          src={'/cards/clock.png'}
-                          alt=""
-                        />
-                        <small className="text-[#A5A5A5]">Due in 4 days</small>
-                      </div>
-                    </div>
-
-
-                  </div>
-
-                  {/* c4 */}
-                  <div className=" text-white w-[250px] h-[90px] bg-[#211A75] rounded-[14px] px-5 py-5">
-                    <div className=" h-[50px] rounded-[14px] border border-dashed border-[#7879F1] bg-[#15132B]">
-
-                    </div>
-                  </div>
-
-
-                  {/* c5 */}
-                  <div className=" text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
-
-                    {/* card header */}
-                    <div className="flex justify-between">
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <div
-                            className="h-[10px] w-[10px] rounded-full bg-[#E328AF]"
-                          />
-                          <small className="text-[#E328AF]">Instructor Meeting</small>
-                        </div>
-
-                      </div>
-                      <Image
-                        className="cursor-pointer"
-                        height={20}
-                        width={20}
-                        src={'/cards/threeDots.png'}
-                        alt=""
-                      />
-                    </div>
-
-                    {/* card body */}
-                    <p className="text-[12px] py-2 mt-2  font-semibold">Plan holiday demonstration program. Create outline.</p>
-                    {/* progress */}
-                    <div className="w-full  lg:w-11/12 py-3">
-                      <div className="mb-0">
-                        <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
-                          <div
-                            className="bg-[#E328AF] absolute top-0 left-0 h-full w-2/4 rounded-2xl"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* card footer */}
-                    <div className="flex justify-between py-3">
-                      {/* img */}
-                      <div className="flex ">
-
-                        <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/p1.jpg'}
-                            alt=""
-                          />
-
-                        </div>
-
-                        <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/segun_adebayo.jpg'}
-                            alt=""
-                          />
-
-                        </div>
-                        <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/p3.jpeg'}
-                            alt=""
-                          />
-
-                        </div>
-
-
-
-                      </div>
-                      {/*  */}
-                      <div className="flex items-center gap-1">
-                        <Image
-                          height={12}
-                          width={12}
-                          src={'/cards/clock.png'}
-                          alt=""
-                        />
-                        <small className="text-[#A5A5A5]">Due in 4 days</small>
-                      </div>
-                    </div>
-
-
-                  </div>
-
-                  {/* c-6 */}
-                  <div className="bg-[#07051A] rounded-[14px]  w-[250px] h-[200px] ">
-
-                    <div className=" rotate-6 translate-x-6 translate-y-9  text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
-
-                      {/* card header */}
-                      <div className="flex justify-between">
-                        <div>
-                          <div className="flex items-center gap-2">
-                            <div
-                              className="h-[10px] w-[10px] rounded-full bg-[#FF4A55]"
-                            />
-                            <small className="text-[#FF4A55]">BUGS FIXING</small>
-                          </div>
-
-                        </div>
-                        <Image
-                          className="cursor-pointer"
-                          height={20}
-                          width={20}
-                          src={'/cards/threeDots.png'}
-                          alt=""
-                        />
-                      </div>
-
-                      {/* card body */}
-                      <p className="text-[12px] py-2 mt-2  font-semibold">Payment gateway needs reauthorization.</p>
-                      {/* progress */}
-                      <div className="w-full  lg:w-11/12 py-3">
-                        <div className="mb-0">
-                          <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
-                            <div
-                              className="bg-[#FF4A55] absolute top-0 left-0 h-full w-11/12 rounded-2xl"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* card footer */}
-                      <div className="flex justify-between py-3">
-                        {/* img */}
-                        <div className="flex ">
-
-                          <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
-                            <Image
-                              className=" rounded-full"
-                              width={20}
-                              height={20}
-                              src={'/content/p1.jpg'}
-                              alt=""
-                            />
-
-                          </div>
-
-                          <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                            <Image
-                              className=" rounded-full"
-                              width={20}
-                              height={20}
-                              src={'/content/segun_adebayo.jpg'}
-                              alt=""
-                            />
-
-                          </div>
-                          <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                            <Image
-                              className=" rounded-full"
-                              width={20}
-                              height={20}
-                              src={'/content/p3.jpeg'}
-                              alt=""
-                            />
-
-                          </div>
-
-
-
-                        </div>
-                        {/*  */}
-                        <div className="flex items-center gap-1">
-                          <Image
-                            height={12}
-                            width={12}
-                            src={'/cards/clock.png'}
-                            alt=""
-                          />
-                          <small className="text-[#A5A5A5]">Due in 4 days</small>
-                        </div>
-                      </div>
-
-
-                    </div>
-                  </div>
-
-
-                  {/* c7 */}
-                  <div className=" text-white w-[250px] h-[180px] bg-[#211A75] rounded-[14px] px-5 py-5">
-
-                    {/* card header */}
-                    <div className="flex justify-between">
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <div
-                            className="h-[10px] w-[10px] rounded-full bg-[#38E25D]"
-                          />
-                          <small className="text-[#38E25D]">Database</small>
-                        </div>
-
-                      </div>
-                      <Image
-                        className="cursor-pointer"
-                        height={20}
-                        width={20}
-                        src={'/cards/threeDots.png'}
-                        alt=""
-                      />
-                    </div>
-
-                    {/* card body */}
-                    <p className="text-[12px] py-2 mt-2  font-semibold">Update new instructor photos.</p>
-                    {/* progress */}
-                    <div className="w-full  lg:w-11/12 py-3">
-                      <div className="mb-0">
-                        <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
-                          <div
-                            className="bg-[#38E25D] absolute top-0 left-0 h-full w-full rounded-2xl"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* card footer */}
-                    <div className="flex justify-between py-3">
-                      {/* img */}
-                      <div className="flex ">
-
-                        <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/p1.jpg'}
-                            alt=""
-                          />
-
-                        </div>
-
-                        <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/segun_adebayo.jpg'}
-                            alt=""
-                          />
-
-                        </div>
-                        <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/p3.jpeg'}
-                            alt=""
-                          />
-
-                        </div>
-
-
-
-                      </div>
-                      {/*  */}
-                      <div className="flex items-center gap-1">
-                        <Image
-                          height={12}
-                          width={12}
-                          src={'/cards/clock.png'}
-                          alt=""
-                        />
-                        <small className="text-[#A5A5A5]">Due in 4 days</small>
-                      </div>
-                    </div>
-
-
-                  </div>
-
-                  {/* c8 */}
-                  <div className="">
-                  </div>
-
-                  {/* c9 */}
-                  <div className="  text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
-
-                    {/* card header */}
-                    <div className="flex justify-between">
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <div
-                            className="h-[10px] w-[10px] rounded-full bg-[#38E25D]"
-                          />
-                          <small className="text-[#38E25D]">Database</small>
-                        </div>
-
-                      </div>
-                      <Image
-                        className="cursor-pointer"
-                        height={20}
-                        width={20}
-                        src={'/cards/threeDots.png'}
-                        alt=""
-                      />
-                    </div>
-
-                    {/* card body */}
-                    <p className="text-[12px] py-2 mt-2  font-semibold">Determine how many boards need to be ordered for testing and demo.</p>
-                    {/* progress */}
-                    <div className="w-full  lg:w-11/12 py-3">
-                      <div className="mb-0">
-                        <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
-                          <div
-                            className="bg-[#38E25D] absolute top-0 left-0 h-full w-1/3 rounded-2xl"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* card footer */}
-                    <div className="flex justify-between py-3">
-                      {/* img */}
-                      <div className="flex ">
-
-                        <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/p1.jpg'}
-                            alt=""
-                          />
-
-                        </div>
-
-                        <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/segun_adebayo.jpg'}
-                            alt=""
-                          />
-
-                        </div>
-                        <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/p3.jpeg'}
-                            alt=""
-                          />
-
-                        </div>
-
-
-
-                      </div>
-                      {/*  */}
-                      <div className="flex items-center gap-1">
-                        <Image
-                          height={12}
-                          width={12}
-                          src={'/cards/clock.png'}
-                          alt=""
-                        />
-                        <small className="text-[#A5A5A5]">Due in 4 days</small>
-                      </div>
-                    </div>
-
-
-                  </div>
-                  {/* c10 */}
-                  <div className="">
-
-                  </div>
-
-                  {/* c11 */}
-                  <div className="  text-white w-[250px] h-[200px] bg-[#211A75] rounded-[14px] px-5 py-5">
-
-                    {/* card header */}
-                    <div className="flex justify-between">
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <div
-                            className="h-[10px] w-[10px] rounded-full bg-[#E328AF]"
-                          />
-                          <small className="text-[#E328AF]">Instructor Meeting</small>
-                        </div>
-
-                      </div>
-                      <Image
-                        className="cursor-pointer"
-                        height={20}
-                        width={20}
-                        src={'/cards/threeDots.png'}
-                        alt=""
-                      />
-                    </div>
-
-                    {/* card body */}
-                    <p className="text-[12px] py-2 mt-2  font-semibold">Review/correct yellow belt techniques.</p>
-                    {/* progress */}
-                    <div className="w-full  lg:w-11/12 py-3">
-                      <div className="mb-0">
-                        <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
-                          <div
-                            className="bg-[#E328AF] absolute top-0 left-0 h-full w-full rounded-2xl"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* card footer */}
-                    <div className="flex justify-between py-3">
-                      {/* img */}
-                      <div className="flex ">
-
-                        <div className="h-[25px] w-[25px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/p1.jpg'}
-                            alt=""
-                          />
-
-                        </div>
-
-                        <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/segun_adebayo.jpg'}
-                            alt=""
-                          />
-
-                        </div>
-                        <div className="-ml-3 h-[25px] w-[25px] rounded-full flex items-center justify-center bg-white">
-                          <Image
-                            className=" rounded-full"
-                            width={20}
-                            height={20}
-                            src={'/content/p3.jpeg'}
-                            alt=""
-                          />
-
-                        </div>
-
-
-
-                      </div>
-                      {/*  */}
-                      <div className="flex items-center gap-1">
-                        <Image
-                          height={12}
-                          width={12}
-                          src={'/cards/clock.png'}
-                          alt=""
-                        />
-                        <small className="text-[#A5A5A5]">Due in 4 days</small>
-                      </div>
-                    </div>
-
-
-                  </div>
-
-                  <div className="hidden"></div>
-                </div>
-
 
               </div>
 
