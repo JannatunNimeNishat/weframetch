@@ -6,10 +6,11 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main >
-      <div className="flex">
+      <div className="lg:flex">
+
         {/* 1st left navigation*/}
-        <div className="w-1/4 bg-[#15132B] text-white ">
-          {/* <div className="col-span-1 bg-gray-500"> */}
+        <div className="hidden lg:block w-1/4 bg-[#15132B] text-white ">
+
           {/* logo */}
           <div className="flex gap-5  justify-center  py-11">
             <h3 className="text-[24px]">weframetech</h3>
@@ -189,11 +190,64 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+
+
         {/* 2nd */}
         <div className="w-full">
 
-          {/* top navigation bar */}
-          <div className="bg-[#15132B] py-6 flex items-center justify-between px-5">
+          {/* top navigation bar sm devices */}
+          <div className="bg-[#15132B] py-3 flex lg:hidden items-center gap-3 justify-between px-5">
+            {/* search bar */}
+
+            <Image
+              height={40}
+              width={40}
+              src={'/logo/hamburgermenu.png'}
+              alt=""
+            />
+
+
+            {/* notifications and profile */}
+            <div className=" flex items-center justify-between gap-3">
+            
+
+           <h3 className="text-white">weframetech</h3>
+
+              {/* profile */}
+              <div className="flex justify-between items-center gap-3">
+                <Image
+                  className="cursor-pointer"
+                  height={40}
+                  width={40}
+                  src={'/navbar/profilePicture.png'}
+                  alt=""
+                />
+                <div>
+                  <small className="text-[10px]   text-white">Instructor Day</small>
+                  <small className="text-[10px] text-[#7879F1]">Super Admin</small>
+                </div>
+
+                <Image
+                  className="cursor-pointer"
+                  height={8}
+                  width={15}
+                  src={'/navbar/arrow.png'}
+                  alt=""
+                />
+              </div>
+
+
+
+
+            </div>
+
+
+          </div>
+
+
+          {/* top navigation bar lg device */}
+          <div className=" bg-[#15132B] py-6 hidden lg:flex items-center justify-between px-5">
             {/* search bar */}
             <div className="bg-[#211A75] w-[260px] h-[50px] rounded-[46px] text-[#AAAAAA] flex gap-3 items-center pl-8">
               <Image
@@ -1204,7 +1258,7 @@ export default function Home() {
 
                 </div>
                 {/* c10 */}
-                <div className="">         
+                <div className="">
 
                 </div>
 
