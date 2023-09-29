@@ -315,48 +315,172 @@ export default function Home() {
           <div className="bg-[#0d0b20]">
             {/* school */}
             <div className=" py-7 px-6 text-white ">
-              <div className="flex justify-between bg-[#15132B] py-7 px-6 rounded-[14px]">
+              <div className=" bg-[#15132B] py-7 px-4 rounded-[14px]">
                 {/* 1st */}
-                <div>
-                  <div className="flex gap-3 items-center">
-                    <Image
-                      className="cursor-pointer"
-                      height={30}
-                      width={30}
-                      src={'/content/btnback.png'}
-                      alt=""
-                    />
-                    <h1 className="font-bold text-[20px]">School November Tasks</h1>
-                  </div>
-                  <p className="pl-11 pt-1  text-[15px]">Created by Instructor Day on November 31, 2022</p>
-
-
-                </div>
-                {/* 2nd */}
-                <div className="flex items-center gap-5">
+                <div className="flex justify-between">
+                  {/* 1st */}
                   <div>
-                    <h1 className="font-bold text-[18px]">Centered Martial Arts</h1>
-                    <p className="pr-11 pt-1  text-[13px] text-[#A5A5A5]">Sunnyvale, Ca</p>
+                    <div className="flex gap-3 items-center">
+                      <Image
+                        className="cursor-pointer"
+                        height={30}
+                        width={30}
+                        src={'/content/btnback.png'}
+                        alt=""
+                      />
+                      <h1 className="font-bold text-[16px]">School November Tasks</h1>
+                    </div>
+                    <p className="pl-11 pt-1  text-[14px]">Created by Instructor Day on November 31, 2022</p>
+
+
                   </div>
-                  <div className="w-[38px] h-[38px] bg-white rounded-[14px] flex items-center justify-center">
+                  {/* 2nd */}
+                  <div className="flex items-center gap-3">
+                    <div>
+                      <h1 className="font-bold text-[15px]">Centered Martial Arts</h1>
+                      <p className="pr-11 pt-1  text-[12px] text-[#A5A5A5]">Sunnyvale, Ca</p>
+                    </div>
+                    <div className="w-[38px] h-[38px] bg-white rounded-[14px] flex items-center justify-center">
+                      <Image
+                        height={24}
+                        width={24}
+                        src={'/content/logo_1.png'}
+                        alt=""
+                      />
+                    </div>
+
                     <Image
                       height={24}
                       width={24}
-                      src={'/content/logo_1.png'}
+                      src={'/content/threeDots.png'}
                       alt=""
                     />
+
+                  </div>
+                </div>
+
+
+                {/* 2nd */}
+                <div className="ml-10 pt-[27px] flex gap-3">
+                  {/* img */}
+                  <div className="flex ">
+
+                    <div className="h-[35px] w-[35px] rounded-full flex items-center justify-center bg-[#C4C4C4]">
+                      <Image
+                        className=" rounded-full"
+                        width={30}
+                        height={30}
+                        src={'/content/p1.jpg'}
+                        alt=""
+                      />
+
+                    </div>
+
+                    <div className="-ml-3 h-[35px] w-[35px] rounded-full flex items-center justify-center bg-white">
+                      <Image
+                        className=" rounded-full"
+                        width={30}
+                        height={30}
+                        src={'/content/segun_adebayo.jpg'}
+                        alt=""
+                      />
+
+                    </div>
+                    <div className="-ml-3 h-[35px] w-[35px] rounded-full flex items-center justify-center bg-white">
+                      <Image
+                        className=" rounded-full"
+                        width={30}
+                        height={30}
+                        src={'/content/p3.jpeg'}
+                        alt=""
+                      />
+
+                    </div>
+                    <div className="-ml-3 h-[35px] w-[35px] rounded-full flex items-center justify-center bg-white">
+                      <Image
+                        className=" rounded-full"
+                        width={30}
+                        height={30}
+                        src={'/content/p4.jpg'}
+                        alt=""
+                      />
+
+                    </div>
+                    <div className="-ml-3 h-[35px] w-[35px] rounded-full flex items-center justify-center bg-[#E328AF]">
+                      <p className="text-white">+4</p>
+
+                    </div>
+
+
                   </div>
 
-                  <Image
-                    height={24}
-                    width={24}
-                    src={'/content/threeDots.png'}
-                    alt=""
-                  />
+                  {/* buttons */}
+                  <div className="flex gap-8 w-full ">
+                    {/* buttons */}
+                    <div className="flex  gap-3">
+                      {/* invite people */}
+                      <div className="flex items-center gap-2 bg-[#6418C3] w-[163px] h-[42px] rounded-[14px] px-2 py-1 cursor-pointer">
+                        <Image
+                          className=" rounded-full"
+                          width={24}
+                          height={24}
+                          src={'/content/add-friend.png'}
+                          alt=""
+                        />
+                        <p className="font-bold">Invite People</p>
+                      </div>
+
+                      {/* private */}
+                      <div className="flex justify-center items-center  bg-transparent w-[89px] h-[42px] border border-[#7879F1] rounded-[14px] cursor-pointer">
+
+                        <p className="font-bold">Private</p>
+                      </div>
+                      {/* Edit */}
+                      <div className="flex justify-center items-center  bg-[#7879F1] w-[78px] h-[42px] border border-[#7879F1] rounded-[14px] cursor-pointer">
+
+                        <p className="font-bold">Edit</p>
+                      </div>
+
+                      {/* 45 Comments */}
+                      <div className="flex items-center gap-2 bg-transparent border border-[#7879F1] w-[163px] h-[42px] rounded-[14px] px-2 py-1 cursor-pointer">
+                        <Image
+                          className=" rounded-full"
+                          width={24}
+                          height={24}
+                          src={'/content/comments.png'}
+                          alt=""
+                        />
+                        <p className="font-bold">45 Comments</p>
+                      </div>
+                    </div>
+                    {/* progress */}
+                    <div className="flex items-center  w-11/12">
+                      <p className="text-[14px]">Total Progress 60%</p>
+                      <div className="w-full px-4 lg:w-6/12">
+                        <div className="mb-0">
+                          <div className="bg-[#1E1C3A] relative h-[10px] w-full rounded-2xl">
+                            <div
+                              className="bg-[#6418C3] absolute top-0 left-0 h-full w-1/2 rounded-2xl"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+
 
                 </div>
+
+
+
               </div>
+
+
             </div>
+
+
           </div>
 
 
